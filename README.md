@@ -36,29 +36,64 @@ Após isso
 
 ### End Points
 <p >Com a Aplicação rodando abra o postman para testar os end points são eles</p>
-<p align="center">Clientes
+<p align="center">Clientes</p>
 
-<p>/cliente/salvar</p>                             exemplo http://localhost:8080/cliente/salvar
-<p>Para salvar um novo cliente      
-<p>/cliente/nome/{"nome do cliente"}               exemplo http://localhost:8080/cliente/nome/Alyson
-<p>Para pesquisar um nome especifico
-<p>/cliente/todos                                  exemplo http://localhost:8080/cliente/todos
-<p>Para pesquisar todos os clientes cadastrados
-<p>/cliente/atualizar                              exemplo http://localhost:8080/cliente/atualizar
-<p>Para atualizar um cliente ja cadastrado é necessario passar o id do cliente
-<p>/cliente/deletar/{id do cliente}                exemplo http://localhost:8080/cliente/deletar/2
+<p>/cliente/salvar                             exemplo http://localhost:8080/cliente/salvar</p>
+<p>Para salvar um novo cliente  </p>    
+<p>/cliente/nome/{"nome do cliente"}               exemplo http://localhost:8080/cliente/nome/Alyson</p>
+<p>Para pesquisar um nome especifico</p>
+<p>/cliente/todos                                  exemplo http://localhost:8080/cliente/todos</p>
+<p>Para pesquisar todos os clientes cadastrados</p>
+<p>/cliente/atualizar                              exemplo http://localhost:8080/cliente/atualizar</p>
+<p>Para atualizar um cliente ja cadastrado é necessario passar o id do cliente</p>
+<p>/cliente/deletar/{id do cliente}                exemplo http://localhost:8080/cliente/deletar/2</p>
 <p>(o id do cliente aparece quando você pesquisa por todos)
-Para excluir um cliente da lista.
+Para excluir um cliente da lista.</p>
   <br>
 <p  align="center">Equipamento</p>
 
-<p>/equipamento/salvar
-<p>Para salvar um novo equipamento
-<p>/equipamento/marca/{"nome da marca"}
-<p>Para pesquisar uma marca especifica
-<p>/equipamento/todos
-<p>Para pesquisar todos os equipamentos cadastrados
-<p>/equipamento/atualizar
-<p>Para atualizar um equipamento ja cadastrado
-<p>/equipamento/deletar/{id do equipamento}
-<p>Para excluir um cliente da lista.
+<p>/equipamento/salvar</p>
+<p>Para salvar um novo equipamento</p>
+<p>/equipamento/marca/{"nome da marca"}</p>
+<p>Para pesquisar uma marca especifica</p>
+<p>/equipamento/todos</p>
+<p>Para pesquisar todos os equipamentos cadastrados</p>
+<p>/equipamento/atualizar</p>
+<p>Para atualizar um equipamento ja cadastrado</p>
+<p>/equipamento/deletar/{id do equipamento}</p>
+<p>Para excluir um cliente da lista.</p>
+
+<h2 align="center">Atenção</h2>
+<h3>São obrigatorios os seguinte itens para criar um usuario </h3>
+<p align="center">
+ <a>Nome</a> •
+ <a>Email</a> • 
+ <a>endereço</a> 
+</p>
+O id não é necessario na criação pois é criado automaticamente
+
+```java
+	private @Id @GeneratedValue(strategy = GenerationType.IDENTITY)long idCliente;
+	private @NotBlank String nome;
+	private @NotBlank String email;
+	private @NotBlank String endereco;
+	private Long telefone;
+  ```
+<h3>Ja no equipamento são necessarios </h3>
+  <p align="center">
+ <a>Marca</a> •
+ <a>Tipo</a> • 
+ <a>Problema</a>  • 
+ <a>Tempo</a>
+</p>
+
+```java
+  	private @Id @GeneratedValue(strategy = GenerationType.IDENTITY) long idEquipamento;
+	private @NotBlank String marca;
+	private @NotBlank String tipo;
+	private @NotBlank String problema;
+	private @NotBlank String tempo;
+	private String mensagem;
+  ```
+
+  <h2>Agradeço a oportunidade caso tenha aluma duvida estarei disponivel para responder</h2>
