@@ -8,7 +8,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.validation.constraints.NotBlank;
 
-//import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
 public class Equipamento {
@@ -19,6 +19,11 @@ public class Equipamento {
 	private @NotBlank String problema;
 	private @NotBlank String tempo;
 	private String mensagem;
+	
+	@ManyToOne
+	@JoinColumn(name = "donos")
+	@JsonIgnoreProperties({ "meusEquipamentos" })
+	private Cliente dono;
 	
 	public long getIdEquipamento() {
 		return idEquipamento;
