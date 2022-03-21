@@ -38,15 +38,15 @@ Após isso
 <p >Com a Aplicação rodando abra o postman para testar os end points são eles</p>
 <p align="center">Clientes
 
-<p>/cliente/salvar</p>
-<p>Para salvar um novo cliente
-<p>/cliente/nome/{"nome do cliente"}
+<p>/cliente/salvar</p>                             exemplo http://localhost:8080/cliente/salvar
+<p>Para salvar um novo cliente      
+<p>/cliente/nome/{"nome do cliente"}               exemplo http://localhost:8080/cliente/nome/Alyson
 <p>Para pesquisar um nome especifico
-<p>/cliente/todos
+<p>/cliente/todos                                  exemplo http://localhost:8080/cliente/todos
 <p>Para pesquisar todos os clientes cadastrados
-<p>/cliente/atualizar
-<p>Para atualizar um cliente ja cadastrado
-<p>/cliente/deletar/{id do cliente}  exemplo http://
+<p>/cliente/atualizar                              exemplo http://localhost:8080/cliente/atualizar
+<p>Para atualizar um cliente ja cadastrado é necessario passar o id do cliente
+<p>/cliente/deletar/{id do cliente}                exemplo http://localhost:8080/cliente/deletar/2
 <p>(o id do cliente aparece quando você pesquisa por todos)
 Para excluir um cliente da lista.
   <br>
